@@ -70,7 +70,7 @@ export default function Highlighter ({
           highlightCount++
 
           const isActive = highlightCount === +activeIndex
-          if (contextualHighlightClasses.length > 1) {
+          if (contextualHighlightClasses.length > 0 && highlightClassName == '') {
             indexOfWord = searchWords.indexOf(text)
             highlightClassNames = `${contextualHighlightClasses[indexOfWord]} ${isActive ? activeClassName : ''}`
           } else {
