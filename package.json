@@ -1,7 +1,7 @@
 {
-  "name": "react-highlight-words",
+  "name": "react-highlight-contextual-words",
   "version": "0.11.0",
-  "description": "React component to highlight words within a larger body of text",
+  "description": "React component to highlight words within a larger body of text. Forked from github.com/bvaughn/react-highlight-words",
   "main": "dist/main.js",
   "scripts": {
     "build": "npm run build:website && npm run build:dist",
@@ -21,14 +21,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bvaughn/react-highlight-words.git"
+    "url": "git+https://github.com/sjnonweb/react-highlight-words.git"
   },
-  "author": "Brian Vaughn",
+  "author": "Sajan Mishra",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bvaughn/react-highlight-words/issues"
+    "url": "https://github.com/sjnonweb/react-highlight-words/issues"
   },
-  "homepage": "https://github.com/bvaughn/react-highlight-words#readme",
+  "homepage": "https://github.com/sjnonweb/react-highlight-words#readme",
   "keywords": [
     "react",
     "reactjs",
