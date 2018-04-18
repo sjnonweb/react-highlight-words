@@ -11,6 +11,7 @@ Highlighter.propTypes = {
   className: PropTypes.string,
   findChunks: PropTypes.func,
   highlightClassName: PropTypes.string,
+  contextualHighlightClasses: PropTypes.arrayOf(PropTypes.string),
   highlightStyle: PropTypes.object,
   highlightTag: PropTypes.oneOfType([
     PropTypes.node,
@@ -37,6 +38,7 @@ export default function Highlighter ({
   className,
   findChunks,
   highlightClassName = '',
+  contextualHighlightClasses = [''],
   highlightStyle = {},
   highlightTag = 'mark',
   sanitize,
@@ -57,6 +59,7 @@ export default function Highlighter ({
   let highlightCount = -1
   let highlightClassNames = ''
   let highlightStyles
+  let indexOfWord = 0
 
   return (
     <span className={className}>
@@ -67,8 +70,12 @@ export default function Highlighter ({
           highlightCount++
 
           const isActive = highlightCount === +activeIndex
-
-          highlightClassNames = `${highlightClassName} ${isActive ? activeClassName : ''}`
+          if (contextualHighlightClasses.length > 1) {
+            indexOfWord = searchWords.indexOf(text)
+            highlightClassNames = `${contextualHighlightClasses[indexOfWord]} ${isActive ? activeClassName : ''}`
+          } else {
+            highlightClassNames = `${highlightClassName} ${isActive ? activeClassName : ''}`
+          }
           highlightStyles = isActive === true && activeStyle != null
             ? Object.assign({}, highlightStyle, activeStyle)
             : highlightStyle
@@ -97,3 +104,5 @@ export default function Highlighter ({
     </span>
   )
 }
+// /home/sajan/programming/react-highlight-words/node_modules/phantomjs2/lib/phantom/bin/phantomjs
+// /home/sajan/programming/react-highlight-words/node_modules/phantomjs2/lib/phantom/bin/phantomjs

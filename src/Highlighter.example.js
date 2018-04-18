@@ -73,7 +73,7 @@ export default class HighlighterExample extends Component {
           Output
         </h4>
 
-        <Highlighter
+        {/* <Highlighter
           activeClassName={styles.Active}
           activeIndex={activeIndex}
           caseSensitive={caseSensitive}
@@ -82,6 +82,12 @@ export default class HighlighterExample extends Component {
           sanitize={latinize}
           searchWords={searchWords}
           textToHighlight={textToHighlight}
+        /> */}
+        <Highlighter
+          contextualHighlightClasses={[styles.highpositive, styles.highneutral, styles.highnegative]}
+          searchWords={['positive', 'neutral', 'negative']}
+          autoEscape
+          textToHighlight={'this is a sample positive and neutral and negative text'}
         />
 
         <p className={styles.Footer}>
