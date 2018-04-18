@@ -45,3 +45,15 @@
 .SecondColumn {
   margin-left: 0.5rem;
 }
+
+.highpositive {
+  background-color: green;
+}
+
+.highneutral {
+  background-color: yellow;
+}
+
+.highnegative {
+  background-color: red;
+}
