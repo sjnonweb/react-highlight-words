@@ -1,6 +1,6 @@
 {
   "name": "react-highlight-contextual-words",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "description": "React component to highlight words within a larger body of text. Forked from github.com/bvaughn/react-highlight-words",
   "main": "dist/main.js",
   "scripts": {
