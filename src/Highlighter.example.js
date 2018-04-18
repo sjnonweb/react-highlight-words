@@ -1,4 +1,4 @@
-import latinize from 'latinize'
+// import latinize from 'latinize'
 import React, { Component } from 'react'
 import Highlighter from './Highlighter'
 import styles from './Highlighter.example.css'
@@ -17,7 +17,7 @@ export default class HighlighterExample extends Component {
   render () {
     const { ...props } = this.props
     const { activeIndex, caseSensitive, searchText, textToHighlight } = this.state
-    const searchWords = searchText.split(/\s/).filter(word => word)
+    // const searchWords = searchText.split(/\s/).filter(word => word)
 
     return (
       <div {...props}>
